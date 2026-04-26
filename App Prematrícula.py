@@ -16,19 +16,13 @@ st.set_page_config(
 st.title("📊 Análisis de la Prematrícula - Ingeniería Física")
 st.markdown("Visualiza estadísticas de prematrícula para el segundo semestre de 2027")
 
-st.write("📂 Archivos en el directorio:")
-st.write(os.listdir("."))
-st.write("")
-st.write("📍 Directorio actual:", os.getcwd())
-st.stop()  # Detener aquí para debugging
-
 # ============================================
 # Carga de datos (caché)
 # ============================================
 @st.cache_data
 def cargar_datos():
     ruta_base = Path(__file__).parent
-    ruta_csv = ruta_base / "Datos Prematrícula (Anónimos y Procesados).csv"
+    ruta_csv = ruta_base / "datos_prematricula_anonimos.csv"
     
     df = pd.read_csv(ruta_csv)
     df['Año Carné'] = df['Año Carné'].astype(str)   # Convertir a string
