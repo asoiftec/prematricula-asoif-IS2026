@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from pathlib import Path
+import os
 
 # Configuración de la página
 st.set_page_config(
@@ -14,6 +15,12 @@ st.set_page_config(
 # Título principal
 st.title("📊 Análisis de la Prematrícula - Ingeniería Física")
 st.markdown("Visualiza estadísticas de prematrícula para el segundo semestre de 2027")
+
+st.write("📂 Archivos en el directorio:")
+st.write(os.listdir("."))
+st.write("")
+st.write("📍 Directorio actual:", os.getcwd())
+st.stop()  # Detener aquí para debugging
 
 # ============================================
 # Carga de datos (caché)
