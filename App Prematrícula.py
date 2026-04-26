@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
 
 # Configuración de la página
 st.set_page_config(
@@ -19,7 +20,10 @@ st.markdown("Visualiza estadísticas de prematrícula para el segundo semestre d
 # ============================================
 @st.cache_data
 def cargar_datos():
-    df = pd.read_csv("Datos Prematrícula (Anónimos y Procesados).csv")
+    ruta_base = Path(__file__).parent
+    ruta_csv = ruta_base / "Datos Prematrícula (Anónimos y Procesados).csv"
+    
+    df = pd.read_csv(ruta_csv)
     df['Año Carné'] = df['Año Carné'].astype(str)   # Convertir a string
     return df
 
