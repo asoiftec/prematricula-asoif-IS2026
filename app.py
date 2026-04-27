@@ -36,7 +36,10 @@ df = cargar_datos()
 st.sidebar.markdown("## 📌 Opciones disponibles:")
 opcion = st.sidebar.radio(
     "Quiero ver:",
-    ["Participación por año de ingreso", "Cursos con mayor demanda","Comparación de dos cursos"],
+    ["Participación por año de ingreso", 
+     "Cursos con mayor demanda",
+     "Comparación de dos cursos",
+     "Vista general por semestre"],
     index=0
 )
 
