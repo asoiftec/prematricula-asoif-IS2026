@@ -15,7 +15,6 @@ st.set_page_config(
 # Título principal
 st.title("📊 Análisis de la Prematrícula - Ingeniería Física")
 st.markdown("Visualiza estadísticas de prematrícula para el segundo semestre de 2027")
-st.markdown("Última modificación: lunes 27 de abril, por Alejandro Hernández Arce.")
 
 # ============================================
 # Carga de datos (caché)
